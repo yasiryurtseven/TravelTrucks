@@ -1,0 +1,58 @@
+.hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 64px;
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/images/Home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 32px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.button {
+  display: flex;   
+  justify-content: center;
+  align-items: center;
+  width: 173px;
+  height: 56px;
+  background-color: #829B91;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #6D7B75;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  text-wrap: nowrap;
+}
+
+
+
