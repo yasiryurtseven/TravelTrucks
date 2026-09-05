@@ -1,0 +1,20 @@
+.pageContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px 64px;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.listSection {
+  flex: 1;
+}
+
+.error {
+  color: #e44848;
+  margin-bottom: 16px;
+}

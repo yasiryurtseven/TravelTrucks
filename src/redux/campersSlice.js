@@ -18,10 +18,10 @@ const campersSlice = createSlice({
           incrementPage: (state) => {
             state.page += 1;
           },
-          resetCaömpers: (state) => {
+          resetCampers: (state) => {
             state.items = [];
             state.page = 1;
-          },
+  },
     },
     extraReducers: (builder) => {
     builder
