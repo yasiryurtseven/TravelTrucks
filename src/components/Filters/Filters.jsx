@@ -8,8 +8,18 @@ export default function Filters({
   onReset,
 }) {
   const handleSubmit = (e) => {
-    e.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
-    onSearch();        // Arama fonksiyonunu tetikler
+    e.preventDefault();
+    onSearch();
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    onChange({
+      target: {
+        name,
+        value: checked,
+      },
+    });
   };
 
   return (
@@ -24,7 +34,7 @@ export default function Filters({
             type="text"
             name="location"
             placeholder="City"
-            value={filters.location}
+            value={filters.location || ''}
             onChange={onChange}
             className={css.input}
           />
@@ -33,27 +43,49 @@ export default function Filters({
 
       <h3 className={css.title}>Filters</h3>
 
-      {/* Vehicle Type (Form) */}
+      {/* ŞARTNAME ZORUNLULUĞU: Vehicle equipment (Çoklu Seçim) */}
+      <div className={css.section}>
+        <h4 className={css.subtitle}>Vehicle equipment</h4>
+        <div className={css.optionsList}>
+          {[
+            { id: 'AC', label: 'AC' },
+            { id: 'kitchen', label: 'Kitchen' },
+            { id: 'TV', label: 'TV' },
+            { id: 'bathroom', label: 'Bathroom' },
+          ].map(({ id, label }) => (
+            <label key={id} className={css.radioLabel}>
+              <input
+                type="checkbox"
+                name={id}
+                checked={Boolean(filters[id])}
+                onChange={handleCheckboxChange}
+                className={css.radio}
+              />
+              <span className={css.radioText}>{label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Camper form */}
       <div className={css.section}>
         <h4 className={css.subtitle}>Camper form</h4>
         <div className={css.optionsList}>
-          {['alcove', 'panelTruck', 'fullyIntegrated'].map((form) => (
-            <label key={form} className={css.radioLabel}>
+          {[
+            { value: 'alcove', label: 'Alcove' },
+            { value: 'panelTruck', label: 'Panel Van' },
+            { value: 'fullyIntegrated', label: 'Integrated' },
+          ].map(({ value, label }) => (
+            <label key={value} className={css.radioLabel}>
               <input
                 type="radio"
                 name="form"
-                value={form}
-                checked={filters.form === form}
+                value={value}
+                checked={filters.form === value}
                 onChange={onChange}
                 className={css.radio}
               />
-              <span className={css.radioText}>
-                {form === 'panelTruck'
-                  ? 'Panel Van'
-                  : form === 'fullyIntegrated'
-                  ? 'Integrated'
-                  : 'Alcove'}
-              </span>
+              <span className={css.radioText}>{label}</span>
             </label>
           ))}
         </div>

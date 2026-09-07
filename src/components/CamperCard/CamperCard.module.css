@@ -120,3 +120,25 @@
 .button:hover {
   background-color:var(--primary-btn) ;
 }
+.priceGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.favoriteBtn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.heartIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}

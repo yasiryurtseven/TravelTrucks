@@ -10,7 +10,7 @@ export const fetchCampers = createAsyncThunk(
         limit,
       });
 
-      // Dolu olan filtreleri parametrelere ekle
+      // Metin ve seçim filtreleri
       if (filters.location?.trim()) {
         params.append('location', filters.location.trim());
       }
@@ -24,13 +24,43 @@ export const fetchCampers = createAsyncThunk(
         params.append('transmission', filters.transmission);
       }
 
+      // Çoklu seçim boolean filtreler (Backend entegrasyonu)
+      const booleanFeatures = [
+        'AC',
+        'kitchen',
+        'bathroom',
+        'TV',
+        'radio',
+        'refrigerator',
+        'microwave',
+        'gas',
+        'water',
+      ];
+
+      booleanFeatures.forEach((feature) => {
+        if (filters[feature]) {
+          params.append(feature, 'true');
+        }
+      });
+
       const response = await api.get(`/campers?${params.toString()}`);
       return response.data;
     } catch (error) {
-      // MockAPI sonuç bulamayınca 404 atar; bunu çökme değil boş sonuç kabul ediyoruz:
       if (error.response && error.response.status === 404) {
         return { items: [], total: 0 };
       }
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchCamperById = createAsyncThunk(
+  'campers/fetchById',
+  async (id, thunkAPI) => {
+    try {
+      const response = await api.get(`/campers/${id}`);
+      return response.data;
+    } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }

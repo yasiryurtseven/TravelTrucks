@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0 0 24px 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #e8ebee;
+  color: #587165;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0 0 4px 0;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.starIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.comment {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #475467;
+  margin: 0;
+}

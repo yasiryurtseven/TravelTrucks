@@ -1,0 +1,59 @@
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.mainImageWrapper {
+  width: 100%;
+  flex: 1; 
+  min-height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f2f4f7;
+  position: relative;
+}
+
+.mainImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnailsList {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+  flex-shrink: 0; 
+}
+
+.thumbBtn {
+  width: 135px;
+  height: 144px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #f2f4f7;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+}
+
+.thumbBtn.active {
+  border: 3px solid #829B91;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
