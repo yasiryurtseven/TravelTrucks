@@ -1,17 +1,16 @@
-# 🚐 TravelTrucks - Campervan Rental Web Application
+#  TravelTrucks - Campervan Rental Web Application
 
 A modern, responsive, and feature-rich campervan rental web application built with React, Redux Toolkit, and React Router. The application provides users with an intuitive interface to browse rental campervans, filter by technical specifications and equipment, manage personal favorites with persistent storage, and submit booking requests.
 
 ---
 
-## 🚀 Live Demo & Links
+##  Live Demo & Links
 
-- Live Demo (Vercel): [https://travel-trucks-yasiryurtseven.vercel.app](https://travel-trucks-yasiryurtseven.vercel.app)
-- GitHub Repository: [https://github.com/yasiryurtseven/TravelTrucks](https://github.com/yasiryurtseven/TravelTrucks)
-
+- **Live Demo (Vercel):** [TravelTrucks Live](https://travel-trucks-kappa-seven.vercel.app/)
+- **GitHub Repository:** [TravelTrucks Repo](https://github.com/yasiryurtseven/TravelTrucks)
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Frontend Core: React 18, Vite
 - State Management: Redux Toolkit, React-Redux
@@ -23,7 +22,7 @@ A modern, responsive, and feature-rich campervan rental web application built wi
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 - Dynamic Catalog & Pagination:
   - Asynchronous pagination with an interactive "Load More" flow.
@@ -45,7 +44,7 @@ A modern, responsive, and feature-rich campervan rental web application built wi
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 TravelTrucks/
 ├── public/              # Static assets and favicon
@@ -78,7 +77,7 @@ TravelTrucks/
 
 ---
 
-## 📦 Getting Started
+##  Getting Started
 
 ### Prerequisites
 Ensure you have Node.js installed on your machine.
@@ -100,10 +99,10 @@ npm run build
 
 ---
 
-## 👤 Author
+##  Author
 - GitHub: @yasiryurtseven ([https://github.com/yasiryurtseven](https://github.com/yasiryurtseven))
 
 ---
 
-## 📄 License
+##  License
 This project is open-source and available under the MIT License.

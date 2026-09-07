@@ -43,7 +43,6 @@ export default function Filters({
 
       <h3 className={css.title}>Filters</h3>
 
-      {/* ŞARTNAME ZORUNLULUĞU: Vehicle equipment (Çoklu Seçim) */}
       <div className={css.section}>
         <h4 className={css.subtitle}>Vehicle equipment</h4>
         <div className={css.optionsList}>
@@ -131,7 +130,6 @@ export default function Filters({
         </div>
       </div>
 
-      {/* Action Buttons */}
       <div className={css.buttonGroup}>
         <button type="submit" className={css.searchBtn}>
           Search

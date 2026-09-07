@@ -24,7 +24,7 @@ export const fetchCampers = createAsyncThunk(
         params.append('transmission', filters.transmission);
       }
 
-      // Çoklu seçim boolean filtreler (Backend entegrasyonu)
+      // Çoklu seçim filtreler 
       const booleanFeatures = [
         'AC',
         'kitchen',

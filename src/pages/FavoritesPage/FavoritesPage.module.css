@@ -32,7 +32,6 @@
   width: 100%;
 }
 
-/* Empty State Düzeni */
 .emptyContainer {
   display: flex;
   flex-direction: column;

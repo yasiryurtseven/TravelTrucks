@@ -1,4 +1,4 @@
-import emptyIllustration from '../../assets/images/NotFound.png'; // Projendeki görselin adı/yolu
+import emptyIllustration from '../../assets/images/NotFound.png'; 
 import css from './EmptyState.module.css';
 
 export default function EmptyState({ onClear, onViewAll }) {

@@ -28,7 +28,6 @@ export default function CatalogPage() {
   const [localFilters, setLocalFilters] = useState(initialFilters);
   const [activeFilters, setActiveFilters] = useState(initialFilters);
 
-  // İlk yükleme
   useEffect(() => {
     dispatch(resetCampers());
     dispatch(fetchCampers({ page: 1, limit: 4, filters: initialFilters }));
@@ -67,12 +66,10 @@ export default function CatalogPage() {
     dispatch(fetchCampers({ page: nextPage, limit: 4, filters: activeFilters }));
   };
 
-  // Hem total kontrolü hem de backend parça sınır kontrolü
   const hasMore = items.length > 0 && items.length < total;
 
   return (
     <main className={css.pageContainer}>
-      {/* Sadece ilk sayfa yüklenirken tam sayfa loader */}
       {isLoading && page === 1 && <Loader />}
 
       <div className={css.contentWrapper}>

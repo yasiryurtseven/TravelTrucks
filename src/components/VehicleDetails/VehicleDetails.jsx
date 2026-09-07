@@ -21,7 +21,6 @@ export default function VehicleDetails({ camper }) {
     water,
   } = camper;
 
-  // Birim ekleme yardımcısı (API'den birimli gelirse çift yazmasın)
   const formatUnit = (val, unit) => {
     if (!val) return '-';
     return String(val).includes(unit) ? val : `${val} ${unit}`;

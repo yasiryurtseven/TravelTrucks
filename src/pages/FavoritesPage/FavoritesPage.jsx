@@ -10,10 +10,9 @@ export default function FavoritesPage() {
   const dispatch = useDispatch();
   const { items, favorites, isLoading } = useSelector((state) => state.campers);
 
-  // Sayfa yenilendiğinde items boşsa MockAPI'den tüm araçları çek
+  // Sayfa yenilendiğinde boşsa hepsini çek
   useEffect(() => {
     if (items.length === 0 && favorites.length > 0) {
-      // Backend'deki tüm araçları getirmek için yüksek bir limit veriyoruz
       dispatch(fetchCampers({ page: 1, limit: 100 }));
     }
   }, [dispatch, items.length, favorites.length]);
@@ -22,7 +21,6 @@ export default function FavoritesPage() {
     return <Loader />;
   }
 
-  // ID tip uyuşmazlığı olmaması için String() ile garantiye alıyoruz
   const favoriteCampers = items.filter((camper) =>
     favorites.map(String).includes(String(camper.id))
   );
